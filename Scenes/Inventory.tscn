@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgncf04ua4l5q"]
+
+[ext_resource type="Texture2D" uid="uid://1cqqxbjoae5o" path="res://Images/shield.png" id="1_fjbhu"]
+[ext_resource type="Texture2D" uid="uid://5p0majyn55k6" path="res://Images/spear.png" id="2_3famd"]
+[ext_resource type="Texture2D" uid="uid://3i6nstqtxb0f" path="res://Images/potion.png" id="3_a5dqm"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shield" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="ShieldImage" type="Sprite2D" parent="."]
+position = Vector2(26, 13)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_fjbhu")
+
+[node name="Spear" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_right = 66.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="SpearImage" type="Sprite2D" parent="."]
+position = Vector2(72, 12)
+scale = Vector2(0.525, 0.25)
+texture = ExtResource("2_3famd")
+
+[node name="Potion" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_right = 105.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="PotionImage" type="Sprite2D" parent="."]
+position = Vector2(120, 15)
+texture = ExtResource("3_a5dqm")

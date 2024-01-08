@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbp8x0886squg"]
+
+[ext_resource type="Script" path="res://Scripts/CombatPlayer.gd" id="1_285nn"]
+[ext_resource type="Texture2D" uid="uid://dyuck2w27gy2r" path="res://Images/icon.svg" id="2_yr5o8"]
+[ext_resource type="PackedScene" uid="uid://b5dr6cx4hslim" path="res://Scenes/Spear.tscn" id="3_3s076"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_toyyv"]
+size = Vector2(31, 30)
+
+[node name="CombatPlayer" type="CharacterBody2D"]
+script = ExtResource("1_285nn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.199219, 0.195313)
+texture = ExtResource("2_yr5o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_toyyv")
+
+[node name="Spear" parent="." instance=ExtResource("3_3s076")]
+scale = Vector2(0.75, 0.75)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[connection signal="body_entered" from="Spear" to="." method="_on_spear_body_entered"]

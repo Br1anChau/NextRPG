@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnl4qhhcstjj2"]
+
+[ext_resource type="Script" path="res://Scripts/StartScene.gd" id="1_f1k7u"]
+[ext_resource type="Texture2D" uid="uid://ccsewg7tok8wo" path="res://Images/startSvreen.jpg" id="1_odwmx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_f1k7u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 343)
+scale = Vector2(0.706036, 0.707911)
+texture = ExtResource("1_odwmx")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 651.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 128.0
+offset_right = 845.0
+offset_bottom = 207.0
+theme_override_font_sizes/normal_font_size = 50
+text = "The Eternal Journey"
+
+[node name="Start Game" type="Button" parent="."]
+offset_left = 467.0
+offset_top = 278.0
+offset_right = 694.0
+offset_bottom = 343.0
+text = "Start Game"
+
+[node name="Load Game" type="Button" parent="."]
+offset_left = 468.0
+offset_top = 393.0
+offset_right = 695.0
+offset_bottom = 458.0
+text = "Load Game"
+
+[connection signal="pressed" from="Start Game" to="." method="_on_start_game_pressed"]

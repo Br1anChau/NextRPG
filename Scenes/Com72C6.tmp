@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4o6m3ibhglje"]
+
+[ext_resource type="PackedScene" uid="uid://dbp8x0886squg" path="res://Scenes/CombatPlayer.tscn" id="1_ms6nl"]
+[ext_resource type="PackedScene" uid="uid://cblvpvuct725a" path="res://Scenes/Enemy.tscn" id="2_lqlvn"]
+
+[node name="CombatTest" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("2_lqlvn")]
+position = Vector2(370, 109)
+
+[node name="CombatPlayer" parent="." instance=ExtResource("1_ms6nl")]
+position = Vector2(812, 306)
