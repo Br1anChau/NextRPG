@@ -31,5 +31,5 @@ func _physics_process(delta):
 func _on_timer_timeout():
 	var newBullet = bullet.instantiate()
 	add_child(newBullet)
-	newBullet.velocity = newBullet.velocity.move_toward(playerPosition, 100)
+	newBullet.velocity = newBullet.velocity.move_toward(playerPosition, SPEED)
 	pass # Replace with function body.
