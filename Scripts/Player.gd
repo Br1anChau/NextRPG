@@ -11,6 +11,7 @@ var textBoxOpen = false
 @onready var textLabel = self.get_node("Control/RichTextLabel")
 var texts = Array()
 var index = 0;
+var fightChance;
 
 func _displayText(index):
 	if(index < texts.size()):
@@ -51,7 +52,10 @@ func _physics_process(delta):
 		textBox.visible = false
 		index = 0
 		
-		
+	if(velocity.x != 0 || velocity.y != 0):
+		fightChance = randi() % 250
+		if(fightChance == 249):
+			get_tree().change_scene_to_file(Global.combatScene)
 	move_and_slide()
 	
 
